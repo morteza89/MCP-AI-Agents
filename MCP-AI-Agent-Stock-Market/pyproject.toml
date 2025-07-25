@@ -1,0 +1,37 @@
+[project]
+name = "mcp-stock-market-client"
+version = "0.1.0"
+description = "MCP-based Stock Market Investment Assistant with AI-powered analysis"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "torch==2.7.1+xpu",
+    "torchvision==0.22.1+xpu",
+    "pytorch-triton-xpu>=3.3.0",
+    "jupyter>=1.1.1",
+    "fastmcp==2.5.2",
+    "httpx==0.28.1",
+    "transformers==4.51.3",
+    "accelerate>=1.9.0",
+    "openvino-genai>=2025.2.0.0",
+    "huggingface-hub>=0.33.5",
+    "python-dotenv>=1.0.0",
+    "requests>=2.31.0",
+    "yfinance>=0.2.30",
+]
+
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-xpu" },
+]
+torchvision = [
+  { index = "pytorch-xpu" },
+]
+pytorch-triton-xpu = [
+  { index = "pytorch-xpu" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-xpu"
+url = "https://download.pytorch.org/whl/xpu"
+explicit = true
