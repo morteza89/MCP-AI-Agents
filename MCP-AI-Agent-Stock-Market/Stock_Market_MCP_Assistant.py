@@ -113,55 +113,55 @@ async def main():
     """
     agent = Stock_Market_Advisor("http://localhost:8000" , "http://localhost:8001", "http://localhost:8002")
 
-    print("🚀 Welcome to the Stock Market Investment Assistant!")
-    print("📈 Get real-time stock data, company information, and AI-powered investment analysis")
-    print("💡 Enter stock symbols like AAPL, TSLA, MSFT, GOOGL, AMZN, etc.")
-    print("🏢 You can also enter company names like 'Apple', 'Tesla', 'Microsoft'")
-    print("📝 Popular symbols: AAPL (Apple), TSLA (Tesla), MSFT (Microsoft), GOOGL (Google), AMZN (Amazon)")
+    print(" Welcome to the Stock Market Investment Assistant!")
+    print(" Get real-time stock data, company information, and AI-powered investment analysis")
+    print(" Enter stock symbols like AAPL, TSLA, MSFT, GOOGL, AMZN, etc.")
+    print(" You can also enter company names like 'Apple', 'Tesla', 'Microsoft'")
+    print(" Popular symbols: AAPL (Apple), TSLA (Tesla), MSFT (Microsoft), GOOGL (Google), AMZN (Amazon)")
     
     while True:
-        symbol = input("\n 📊 Enter stock symbol or company name to analyze (or 'exit' to quit): ").strip()
+        symbol = input("\n  Enter stock symbol or company name to analyze (or 'exit' to quit): ").strip()
         if symbol.lower() == "exit":
-            print(" 👋 Exiting Stock Market Investment Assistant. Happy investing!")
+            print("  Exiting Stock Market Investment Assistant. Happy investing!")
             break
 
         if not symbol:
             print(" ❌ Please enter a valid stock symbol or company name.")
             continue
 
-        print(f"\n 🔍 Analyzing {symbol.upper()}...")
+        print(f"\n  Analyzing {symbol.upper()}...")
         try:
-            print(" 📈 Fetching stock price data...")           
+            print("  Fetching stock price data...")           
             stock_data_raw = await agent.get_stock_price(symbol)
             stock_data = stock_data_raw[0].text if isinstance(stock_data_raw, list) else str(stock_data_raw)
             
             # Check if we got rate limited or other errors
             if "Rate limit exceeded" in stock_data or "Too Many Requests" in stock_data:
-                print(f"\n ⏳ Rate limit encountered. Waiting 30 seconds before retrying...")
-                print("   💡 Tip: Try again in a minute, or use a different symbol")
+                print(f"\n  Rate limit encountered. Waiting 30 seconds before retrying...")
+                print("    Tip: Try again in a minute, or use a different symbol")
                 continue
             elif "not found" in stock_data.lower():
                 print(f"\n ❌ Stock Price Data for {symbol.upper()}:\n{stock_data}")
                 continue
             else:
-                print(f"\n 💰 Stock Price Data for {symbol.upper()}:\n{stock_data}")
+                print(f"\n  Stock Price Data for {symbol.upper()}:\n{stock_data}")
             
-            print(" 🏢 Fetching company information...")
+            print("  Fetching company information...")
             company_info = await agent.get_company_info(symbol)
             
             if "Unable to find company information" in company_info:
                 print(f"\n ❌ Company Information for {symbol.upper()}:\n{company_info}")
                 continue
             else:
-                print(f"\n 📋 Company Information for {symbol.upper()}:\n{company_info}")
+                print(f"\n  Company Information for {symbol.upper()}:\n{company_info}")
 
-            print(" 🤖 Generating AI investment analysis...")
+            print("  Generating AI investment analysis...")
             analysis = await agent.get_investment_analysis(stock_data, company_info)
-            print(f"\n 💡 Investment Analysis for {symbol.upper()}:\n{analysis}")
+            print(f"\n  Investment Analysis for {symbol.upper()}:\n{analysis}")
             
         except Exception as e:
             print(f" ❌ An error occurred: {str(e)}")
-            print("    💡 Try again with a different symbol or check your internet connection")
+            print("     Try again with a different symbol or check your internet connection")
 
 if __name__ == "__main__":
     asyncio.run(main())

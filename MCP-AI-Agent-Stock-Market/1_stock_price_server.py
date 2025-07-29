@@ -143,7 +143,7 @@ async def get_stock_price(symbol: str) -> str:
             
             suggestion_text = ""
             if suggestions:
-                suggestion_text = f"\n        💡 Did you mean: {', '.join(suggestions[:3])}?"
+                suggestion_text = f"\n         Did you mean: {', '.join(suggestions[:3])}?"
             
             return f"Stock symbol '{symbol}' not found or no data available.{suggestion_text}\n        📝 Try using the official stock symbol (e.g., AAPL for Apple, TSLA for Tesla)"
         

@@ -9,7 +9,7 @@ from fastmcp import Client
 
 async def test_symbol_conversion():
     """Test company name to symbol conversion"""
-    print("🧪 Testing Symbol Conversion & Error Handling")
+    print(" Testing Symbol Conversion & Error Handling")
     print("=" * 50)
     
     test_cases = [
@@ -21,11 +21,11 @@ async def test_symbol_conversion():
     ]
     
     for test_symbol in test_cases:
-        print(f"\n🔍 Testing: '{test_symbol}'")
+        print(f"\n Testing: '{test_symbol}'")
         try:
             async with Client("http://localhost:8000/sse") as client:
                 result = await client.call_tool("get_stock_price", {"symbol": test_symbol})
-                print(f"✅ Result: {result}")
+                print(f" Result: {result}")
         except Exception as e:
             print(f"❌ Error: {e}")
         
