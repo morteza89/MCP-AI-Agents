@@ -4,11 +4,11 @@ A Model Context Protocol (MCP) based application that provides real-time stock p
 
 ## Features
 
-🚀 **Real-time Stock Data**: Get current stock prices, trading volumes, market caps, and key metrics  
-🏢 **Company Information**: Detailed company profiles, financial metrics, and business insights  
-🤖 **AI Investment Analysis**: Intelligent investment recommendations based on technical and fundamental analysis  
-💡 **Multi-server Architecture**: Scalable MCP server design for different data sources  
-⚡ **Intel Optimized**: Leverages Intel® Core™ Ultra processors for fast AI inference  
+**Real-time Stock Data**: Get current stock prices, trading volumes, market caps, and key metrics  
+**Company Information**: Detailed company profiles, financial metrics, and business insights  
+**AI Investment Analysis**: Intelligent investment recommendations based on technical and fundamental analysis  
+**Multi-server Architecture**: Scalable MCP server design for different data sources  
+**Intel Optimized**: Leverages Intel® Core™ Ultra processors for fast AI inference  
 
 ## Quick Start
 
@@ -91,16 +91,16 @@ uv run 3_LLM_inference_server_OV.py
 uv run Stock_Market_MCP_Assistant.py
 ```
 
-## 📊 Usage
+## Usage
 
 1. The client will prompt you for a stock symbol or company name
 2. Enter any valid input:
    - **Stock symbols**: AAPL, TSLA, MSFT, GOOGL, AMZN
    - **Company names**: Apple, Tesla, Microsoft, Google, Amazon
 3. Get comprehensive investment analysis:
-   - 💰 Real-time stock price and trading data
-   - 🏢 Detailed company information and financials
-   - 🤖 AI-generated investment analysis and recommendations
+   - Real-time stock price and trading data
+   - Detailed company information and financials
+   - AI-generated investment analysis and recommendations
 4. Type `exit` to quit
 
 ### Smart Symbol Recognition
@@ -111,7 +111,7 @@ The system automatically converts company names to stock symbols:
 - "Google" or "Alphabet" → GOOGL
 - And many more!
 
-## 🛠️ Alternative Setup (If uv is not in PATH)
+## Alternative Setup (If uv is not in PATH)
 
 If you encounter `uv : The term 'uv' is not recognized` errors, use the full path commands:
 
@@ -129,17 +129,17 @@ If you encounter `uv : The term 'uv' is not recognized` errors, use the full pat
 ## Example Output
 
 ```
-🚀 Welcome to the Stock Market Investment Assistant!
-📈 Get real-time stock data, company information, and AI-powered investment analysis
-💡 Enter stock symbols like AAPL, TSLA, MSFT, GOOGL, AMZN, etc.
-🏢 You can also enter company names like 'Apple', 'Tesla', 'Microsoft'
+ Welcome to the Stock Market Investment Assistant!
+ Get real-time stock data, company information, and AI-powered investment analysis
+ Enter stock symbols like AAPL, TSLA, MSFT, GOOGL, AMZN, etc.
+ You can also enter company names like 'Apple', 'Tesla', 'Microsoft'
 
-📊 Enter stock symbol or company name to analyze (or 'exit' to quit): apple
+Enter stock symbol or company name to analyze (or 'exit' to quit): apple
 
-🔍 Analyzing APPLE...
-📈 Fetching stock price data...
+ Analyzing APPLE...
+ Fetching stock price data...
 
-💰 Stock Price Data for APPLE:
+ Stock Price Data for APPLE:
 (Converted 'apple' to symbol 'AAPL')
 - Company: Apple Inc. (AAPL)
 - Exchange: NASDAQ
@@ -151,9 +151,9 @@ If you encounter `uv : The term 'uv' is not recognized` errors, use the full pat
 - Volume: 45.2M
 - Market Cap: $2.35T
 
-🏢 Fetching company information...
+ Fetching company information...
 
-📋 Company Information for AAPL:
+ Company Information for AAPL:
 (Converted 'apple' to symbol 'AAPL')
 - Company: Apple Inc. (AAPL)
 - Sector: Technology
@@ -161,14 +161,14 @@ If you encounter `uv : The term 'uv' is not recognized` errors, use the full pat
 - Market Cap: $2.35T
 ...
 
-🤖 Generating AI investment analysis...
+ Generating AI investment analysis...
 
-💡 Investment Analysis for AAPL:
+ Investment Analysis for AAPL:
 Overall Assessment: BULLISH
 Strong fundamentals with consistent revenue growth...
 ```
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
@@ -184,7 +184,7 @@ Strong fundamentals with consistent revenue growth...
                     └─────────────────┘
 ```
 
-## 📦 Components
+## Components
 
 - **Stock Price Server** (`1_stock_price_server.py`): Fetches real-time stock prices using Yahoo Finance API
 - **Company Info Server** (`2_company_info_server.py`): Retrieves company financials using multiple APIs  
@@ -244,7 +244,7 @@ Example:
 & "$env:USERPROFILE\.local\bin\uv.exe" run Stock_Market_MCP_Assistant.py
 ```
 
-## 🚀 Quick Test
+## Quick Test
 
 Test individual servers using the test client:
 ```powershell
@@ -256,26 +256,26 @@ Test the improvements:
 uv run test_improvements.py
 ```
 
-## 🔗 APIs Used
+## APIs Used
 
 - [Yahoo Finance API](https://finance.yahoo.com/) - Real-time stock price data (free)
 - [Alpha Vantage API](https://www.alphavantage.co/) - Company fundamentals (optional, free tier available)
 - [Financial Modeling Prep](https://financialmodelingprep.com/) - Financial data (optional, free tier available)
 - [Qwen 2.5-3B-Instruct](https://huggingface.co/Qwen/Qwen2.5-3B-Instruct) - AI model for investment analysis
 
-## 📜 License
+## License
 
 This project is licensed under the MIT License.
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 This software is for educational and informational purposes only. It does not constitute financial advice, investment recommendations, or investment research. Always consult with qualified financial professionals before making investment decisions. Past performance does not guarantee future results.
 
-## ⚡ Intel® Acceleration
+## Intel® Acceleration
 
 This project leverages Intel® Core™ Ultra Processors with PyTorch XPU backend for accelerated AI inference, providing fast and efficient investment analysis.
 
