@@ -42,7 +42,7 @@ async def test_llm_server():
 
 async def main():
     """Test all servers"""
-    print("🚀 Testing MCP Stock Market Servers")
+    print(" Testing MCP Stock Market Servers")
     print("=" * 50)
     
     await test_stock_price_server()

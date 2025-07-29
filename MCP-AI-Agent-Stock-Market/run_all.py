@@ -17,7 +17,7 @@ server_processes = []
 
 def cleanup_processes():
     """Clean up all server processes"""
-    print("\n🛑 Stopping all servers...")
+    print("\n Stopping all servers...")
     for process in server_processes:
         try:
             process.terminate()
@@ -36,36 +36,36 @@ async def main():
     # Register signal handler
     signal.signal(signal.SIGINT, signal_handler)
     
-    print("🚀 Starting Stock Market MCP Assistant")
+    print(" Starting Stock Market MCP Assistant")
     print("=" * 50)
     
     # Check if uv is available
     uv_path = Path.home() / ".local" / "bin" / "uv.exe"
     if not uv_path.exists():
-        print("❌ uv not found. Please install uv first:")
+        print(" uv not found. Please install uv first:")
         print("   powershell -ExecutionPolicy ByPass -c \"irm https://astral.sh/uv/install.ps1 | iex\"")
         return
     
     try:
         # Start servers
-        print("📈 Starting Stock Price Server (Port 8000)...")
+        print(" Starting Stock Price Server (Port 8000)...")
         server1 = subprocess.Popen([str(uv_path), "run", "1_stock_price_server.py"])
         server_processes.append(server1)
         await asyncio.sleep(2)
         
-        print("🏢 Starting Company Info Server (Port 8001)...")
+        print(" Starting Company Info Server (Port 8001)...")
         server2 = subprocess.Popen([str(uv_path), "run", "2_company_info_server.py"])
         server_processes.append(server2)
         await asyncio.sleep(2)
         
-        print("🤖 Starting LLM Server (Port 8002)...")
+        print(" Starting LLM Server (Port 8002)...")
         server3 = subprocess.Popen([str(uv_path), "run", "3_LLM_inference_server_OV.py"])
         server_processes.append(server3)
         
-        print("⏳ Waiting for servers to start up...")
+        print(" Waiting for servers to start up...")
         await asyncio.sleep(5)
         
-        print("🎯 Starting Stock Market Assistant...")
+        print(" Starting Stock Market Assistant...")
         print("=" * 50)
         
         # Run the client
@@ -74,7 +74,7 @@ async def main():
     except KeyboardInterrupt:
         pass
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print(f" Error: {e}")
     finally:
         cleanup_processes()
 
