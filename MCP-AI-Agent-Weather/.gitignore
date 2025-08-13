@@ -1,0 +1,12 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+# folders
+qwen2.5-1.5b-instruct-int8-ov
+# Virtual environments
+.venv
+.env
