@@ -145,7 +145,7 @@ Enter stock symbol or company name to analyze (or 'exit' to quit): apple
 - Exchange: NASDAQ
 - Current Price: $150.25 USD
 - Previous Close: $148.50 USD
-- Daily Change: 📈 +1.75 (+1.18%)
+- Daily Change:  +1.75 (+1.18%)
 - Day Range: $149.20 - $151.30 USD
 - 52-Week Range: $124.17 - $199.62 USD
 - Volume: 45.2M
@@ -193,7 +193,7 @@ Strong fundamentals with consistent revenue growth...
 - **Client** (`Stock_Market_MCP_Assistant.py`): Orchestrates all servers and provides user interface
 - **Easy Runner** (`run_all.py`): Starts all servers automatically for convenience
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### Port Already in Use
 If you get port errors, kill existing Python processes:
