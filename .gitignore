@@ -1,4 +1,7 @@
-﻿# Model files and directories (large AI models)
+﻿# Development folder - exclude from repo
+blender-mcp/
+
+# Model files and directories (large AI models)
 qwen2.5-1.5b-instruct-int8-ov/
 *.bin
 *.onnx

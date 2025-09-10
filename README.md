@@ -38,16 +38,17 @@ A sophisticated financial analysis system that demonstrates MCP's power in real-
 -  Intel hardware acceleration for fast AI inference
 
 ###  [MCP-AI-Agent-Weather](./MCP-AI-Agent-Weather/)
-**Intelligent Weather Analysis System** *(Coming Soon)*
+**AI-Powered Weather & Air Quality Health Assistant**
 
-Advanced weather intelligence platform showcasing MCP's versatility:
+An intelligent health advisory system that combines weather and air quality data with AI-generated health recommendations:
 
-**Planned Features:**
--  Real-time weather data and forecasting
--  Geospatial weather analysis
--  AI weather pattern insights
--  Multi-source weather API integration
--  Severe weather monitoring and alerts
+**Key Features:**
+-  Real-time weather data from Open-Meteo API
+-  Air Quality Index (AQI) monitoring with detailed pollutant analysis
+-  AI-powered health and safety recommendations using Qwen 2.5 models
+-  Comprehensive pollutant tracking (CO, NO₂, O₃, SO₂, PM2.5, PM10, NH₃)
+-  Intel OpenVINO optimization for fast AI inference
+-  Location-based weather and air quality reports
 
 ##  Technology Stack
 

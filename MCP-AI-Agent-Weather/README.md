@@ -60,12 +60,12 @@ uv run Weather_AQI_MCP_Assistant.py
 1. The client will prompt you for a location
 2. Enter any city name (e.g., "Seattle", "New York", "London")
 3. Get comprehensive reports:
-   - 🌤️ Current weather conditions
-   - 🌿 Air quality index and pollutant levels
-   - 🏥 AI-generated health and safety recommendations
+   - Current weather conditions
+   - Air quality index and pollutant levels
+   - AI-generated health and safety recommendations
 4. Type `exit` to quit
 
-## 🛠️ Alternative Setup (If uv is not in PATH)
+## Alternative Setup (If uv is not in PATH)
 
 If you encounter `uv : The term 'uv' is not recognized` errors, use the full path commands in separate terminals:
 
@@ -111,7 +111,7 @@ Health & Safety Advice:
 ...
 ```
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
@@ -135,7 +135,7 @@ Health & Safety Advice:
 - **LLM Server (OpenVINO)** (`3_LLM_inference_server_OV_fixed.py`): Optimized AI recommendations using Intel OpenVINO (smaller, faster)
 - **Client** (`Weather_AQI_MCP_Assistant.py`): Orchestrates all servers and provides user interface
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### Port Already in Use
 If you get port errors, kill existing Python processes:
@@ -156,13 +156,13 @@ Add to PATH or use full path:
 & "$env:USERPROFILE\.local\bin\uv.exe" run [script_name]
 ```
 
-## 🔗 APIs Used
+## APIs Used
 
 - [Open-Meteo Weather API](https://open-meteo.com/) - Weather data
 - [OpenWeatherMap Air Pollution API](https://openweathermap.org/api/air-pollution) - AQI data
 - [Qwen 2.5-3B-Instruct](https://huggingface.co/Qwen/Qwen2.5-3B-Instruct) - AI model for health recommendations
 
-## ⚡ Intel® Acceleration
+## Intel® Acceleration
 
 This project leverages Intel® Core™ Ultra Processors with PyTorch XPU backend for accelerated AI inference, providing fast and efficient health recommendations.
 

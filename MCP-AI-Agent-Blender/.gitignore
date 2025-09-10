@@ -1,0 +1,45 @@
+# Exclude smilar folder and other development files
+smilar/
+
+# Model files and directories (large AI models)
+qwen2.5-1.5b-instruct-int8-ov/
+*.bin
+*.onnx
+*.xml
+*.safetensors
+models/
+checkpoints/
+
+# Python cache and virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+
+# Environment variables
+.env
+.env.local
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and temp files
+*.log
+logs/
+temp/
+tmp/
+*.tmp
+
+# Cache directories
+.cache/
+.pytest_cache/
